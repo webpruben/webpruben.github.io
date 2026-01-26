@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Sección de criaturas</title>
+
+  <style>
+
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body {
+    background-color: rgb(245, 247, 250);
+    margin: 0;
+    padding: 0;
+  }
+
+  header, nav, main, footer {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(210, 220, 230);
+    border-radius: 14px;
+    padding: 16px;
+  }
+
+  header h1 {
+    text-align: center;
+    margin: 0 0 10px 0;
+  }
+
+  nav h2 {
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0 0 0 18px;
+  }
+
+  nav a {
+    color: rgb(27, 38, 59);
+  }
+
+  section {
+    border: 2px dashed rgb(220, 226, 230);
+    border-radius: 12px;
+    padding: 14px;
+    margin: 16px 0;
+    background-color: rgb(250, 251, 252);
+  }
+
+  article {
+    border: 1px solid rgb(225, 230, 235);
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 14px;
+    margin: 12px 0;
+  }
+
+  .titulo {
+    text-align: center;
+    color: rgb(27, 38, 59);
+  }
+
+  .texto {
+    color: rgb(45, 55, 72);
+  }
+
+  .texto strong {
+    color: rgb(231, 111, 81);
+  }
+
+  .grupo-a .titulo {
+    color: rgb(45, 106, 79);
+  }
+
+  .grupo-a .texto {
+    color: rgb(27, 38, 59);
+  }
+
+  .grupo-a .texto strong {
+    color: rgb(10, 123, 131);
+  }
+
+  .grupo-b .titulo {
+    color: rgb(138, 43, 226);
+  }
+
+  .grupo-b .texto {
+    color: rgb(38, 70, 83);
+  }
+
+  .grupo-b .texto strong {
+    color: rgb(244, 162, 97);
+  }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1 class="titulo">Sección de criaturas</h1>
+</header>
+
+<nav>
+  <h2 class="titulo">Índice</h2>
+  <ul>
+    <li><a href="#grupo-a">Grupo A</a></li>
+    <li><a href="#grupo-b">Grupo B</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section id="grupo-a" class="grupo-a">
+    <h2 class="titulo">Grupo A</h2>
+
+    <article>
+      <h3 class="titulo">Rana</h3>
+      <p class="texto">
+        La <strong>criatura</strong> vive en zonas húmedas de montaña.
+      </p>
+      <img src="imagenes/rana.jpg" alt="Rana en su hábitat">
+    </article>
+
+    <article>
+      <h3 class="titulo">Camaleón</h3>
+      <p class="texto">
+        Reptil capaz de <strong>cambiar de color</strong> para adaptarse al entorno.
+      </p>
+      <img src="imagenes/camaleon.jpg" alt="Camaleón en la vegetación">
+    </article>
+
+    <article>
+      <h3 class="titulo">Iguana</h3>
+      <p class="texto">
+        Animal que se <strong>mimetiza</strong> con la vegetación tropical.
+      </p>
+      <img src="imagenes/iguana.jpg" alt="Iguana sobre una rama">
+    </article>
+  </section>
+
+  <section id="grupo-b" class="grupo-b">
+    <h2 class="titulo">Grupo B</h2>
+
+    <article>
+      <h3 class="titulo">Guacamayo</h3>
+      <p class="texto">
+        Ave tropical de <strong>colores intensos</strong>.
+      </p>
+      <img src="imagenes/guacamayo.jpg" alt="Guacamayo">
+    </article>
+
+    <article>
+      <h3 class="titulo">Salamandra</h3>
+      <p class="texto">
+        Anfibio cuya piel indica <strong>toxicidad</strong>.
+      </p>
+      <img src="imagenes/salamandra.jpg" alt="Salamandra">
+    </article>
+
+    <article>
+      <h3 class="titulo">Flamenco</h3>
+      <p class="texto">
+        Ave acuática de plumaje <strong>rosado</strong>.
+      </p>
+      <img src="imagenes/flamenco.jpg" alt="Flamenco">
+    </article>
+  </section>
+
+</main>
+
+<footer>
+  <p class="texto">Trabajo de CSS — Modelo de caja</p>
+</footer>
+
+</body>
+</html>
