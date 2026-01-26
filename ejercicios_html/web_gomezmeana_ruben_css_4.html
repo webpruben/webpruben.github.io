@@ -1,183 +1,158 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <title>Sección de criaturas</title>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS 3 · Sección de criaturas — Rubén Gómez Meana</title>
+    <style>
+      * {
+        font-family: "Trebuchet MS", sans-serif;
+      } 
+      body {
+        background-color: #F0F8F4;
+        margin: 0;
+        padding: 0;
+      }
 
-  <style>
+      .titulo { 
+        color:#2B2B2B;
+        text-align: center;
+      }
 
-  * {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+      .texto {color:#7A7A7A}
+      .texto strong { color:#5A5A5A}
 
-  body {
-    background-color: rgb(245, 247, 250);
-    margin: 0;
-    padding: 0;
-  }
+      .verde .titulo { color: #2E7D32; }
+      .verde .texto { color: #4E342E}
+      .verde .texto strong { color: #8BC34A}
 
-  header, nav, main, footer {
-    max-width: 1000px;
-    margin: 20px auto;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(210, 220, 230);
-    border-radius: 14px;
-    padding: 16px;
-  }
+      .rojo .titulo { color: #E63946; }
+      .rojo .texto {color: #333333}
+      .rojo .texto strong {color: #2A9D8F}
 
-  header h1 {
-    text-align: center;
-    margin: 0 0 10px 0;
-  }
+      nav h2 {
+        margin: 0 0 10px 0;
+        text-align: center;
+      }
+      nav ul {
+        margin: 0;
+        padding: 0 0 0 18px;
+      }
+      nav a {
+        color: rgb(27, 38, 59);
+        text-decoration: none;
+      }
 
-  nav h2 {
-    margin: 0 0 10px 0;
-    text-align: center;
-  }
+      section {
+        border: 2px dashed rgb(210, 214, 218);
+        border-radius: 12px;
+        padding: 14px;
+        margin: 16px auto;
+        background-color: rgb(245, 247, 248);
+        max-width: 1000px;
+      }
 
-  nav ul {
-    margin: 0;
-    padding: 0 0 0 18px;
-  }
+      article {
+        border: 1px solid rgb(200, 205, 210);
+        background-color: rgb(255, 255, 255);
+        border-radius: 12px;
+        padding: 14px;
+        margin: 12px 0;
+      }
 
-  nav a {
-    color: rgb(27, 38, 59);
-  }
+      img {
+        display: block;
+        margin: 10px auto;
+      }
 
-  section {
-    border: 2px dashed rgb(220, 226, 230);
-    border-radius: 12px;
-    padding: 14px;
-    margin: 16px 0;
-    background-color: rgb(250, 251, 252);
-  }
+    </style>
+  </head>
+  <body>
 
-  article {
-    border: 1px solid rgb(225, 230, 235);
-    background-color: rgb(255, 255, 255);
-    border-radius: 12px;
-    padding: 14px;
-    margin: 12px 0;
-  }
+    <h2 id="indice">Índice</h2>
+    <nav>
+      <ul>
+        <li><a href="#verde">Grupo verde</a></li>
+        <li><a href="#rojo">Grupo rojo</a></li>
+      </ul>
+    </nav>
 
-  .titulo {
-    text-align: center;
-    color: rgb(27, 38, 59);
-  }
+    <section class="verde" id="verde">
+      <h3 class="titulo">Clase verde:</h3>
 
-  .texto {
-    color: rgb(45, 55, 72);
-  }
+      <article>
+        <h2 class="titulo" id="rana">Rana</h2>
+        <p class="texto">
+          La <strong>criatura</strong> vive en zonas húmedas de montaña. Su hábitat típico combina vegetación densa y agua fría.
+          Se caracteriza por un patrón de color llamativo y por su comportamiento tranquilo.
+          Es un <strong>anfibio</strong>, por ello es tanto un animal terrestre como acuático.
+          Sus colores <strong>verdes</strong> hacen que se pueda camuflar con el entorno evitando posibles depredadores.
+          <small><a href="#indice">Volver al índice</a></small>
+        </p>
+        <img src="imagenes/rana.jpg" alt="Rana en su hábitat de montaña" width="400">
+      </article>
 
-  .texto strong {
-    color: rgb(231, 111, 81);
-  }
+      <article>
+        <h2 class="titulo" id="camaleon">Camaleón</h2>
+        <p class="texto">
+          El <strong>camaleón</strong> vive en selvas tropicales y zonas boscosas donde la vegetación es densa y variada.
+          Su hábitat le permite usar su color verde brillante para camuflarse y protegerse de sus depredadores.
+          Es un reptil que destaca por su capacidad de cambiar de color y su comportamiento tranquilo, adaptándose perfectamente al entorno donde predomina el verde.
+          <small><a href="#indice">Volver al índice</a></small>
+        </p>
+        <img src="imagenes/camaleon.jpg" alt="Camaleón entre vegetación" width="400">
+      </article>
 
-  .grupo-a .titulo {
-    color: rgb(45, 106, 79);
-  }
+      <article>
+        <h2 class="titulo" id="iguana">Iguana</h2>
+        <p class="texto">
+          La <strong>iguana</strong> vive en regiones tropicales donde abundan los árboles y la vegetación frondosa.
+          Su piel verde y escamosa le permite mimetizarse con las hojas y ramas, facilitando su camuflaje frente a los depredadores.
+          Es un reptil que se alimenta principalmente de plantas y suele pasar gran parte del tiempo tomando el sol para regular su temperatura.
+          <small><a href="#indice">Volver al índice</a></small>
+        </p>
+        <img src="imagenes/iguana.jpg" alt="Iguana entre hojas" width="400">
+      </article>
+    </section>
 
-  .grupo-a .texto {
-    color: rgb(27, 38, 59);
-  }
+    <section class="rojo" id="rojo">
+      <h3 class="titulo">Clase roja:</h3>
 
-  .grupo-a .texto strong {
-    color: rgb(10, 123, 131);
-  }
+      <article>
+        <h2 class="titulo" id="guacamayo">Guacamayo</h2>
+        <p class="texto">
+          El <strong>guacamayo</strong> vive en selvas tropicales de centroamérica y sudamérica. Su hábitat típico combina una alta humedad con árboles altos.
+          Se caracteriza por un patrón de colores llamativos, como el rojo, azul, amarillo o verde.
+          Es un <strong>ave</strong>, por ello es un animal que puede volar. 
+          Sus colores sirven como forma de comunicación y de distinción entre especies.
+          <small><a href="#indice">Volver al índice</a></small>
+        </p>
+        <img src="imagenes/guacamayo.jpg" alt="Guacamayo en su hábitat" width="400">
+      </article>
 
-  .grupo-b .titulo {
-    color: rgb(138, 43, 226);
-  }
+      <article>
+        <h2 class="titulo" id="salamandra">Salamandra</h2>
+        <p class="texto">
+          La <strong>salamandra</strong> de fuego habita en zonas húmedas y boscosas donde el suelo está cubierto de hojarasca y musgo.
+          Su piel con tonos rojos y negros brillantes actúa como advertencia para posibles depredadores, indicando que puede ser venenosa.
+          Este pequeño <strong>anfibio</strong> destaca por su resistencia y su forma de vida sigilosa en ambientes oscuros y húmedos.
+          <small><a href="#indice">Volver al índice</a></small>
+        </p>
+        <img src="imagenes/salamandra.jpg" alt="Salamandra roja en su hábitat" width="400">
+      </article>
 
-  .grupo-b .texto {
-    color: rgb(38, 70, 83);
-  }
+      <article>
+        <h2 class="titulo" id="flamenco">Flamenco</h2>
+        <p class="texto">
+          El <strong>flamenco</strong> habita en lagunas salinas y cuerpos de agua poco profundos con alta concentración de minerales.
+          Su plumaje rojo y rosado brillante es característico y le sirve para comunicarse y atraer a sus compañeros durante la época de reproducción.
+          Es un ave social que vive en grandes grupos y utiliza su color para distinguirse en su entorno acuático.
+          <small><a href="#indice">Volver al índice</a></small>
+        </p>
+        <img src="imagenes/flamenco.jpg" alt="Flamenco en laguna salina" width="400">
+      </article>
 
-  .grupo-b .texto strong {
-    color: rgb(244, 162, 97);
-  }
+    </section>
 
-  </style>
-</head>
-
-<body>
-
-<header>
-  <h1 class="titulo">Sección de criaturas</h1>
-</header>
-
-<nav>
-  <h2 class="titulo">Índice</h2>
-  <ul>
-    <li><a href="#grupo-a">Grupo A</a></li>
-    <li><a href="#grupo-b">Grupo B</a></li>
-  </ul>
-</nav>
-
-<main>
-
-  <section id="grupo-a" class="grupo-a">
-    <h2 class="titulo">Grupo A</h2>
-
-    <article>
-      <h3 class="titulo">Rana</h3>
-      <p class="texto">
-        La <strong>criatura</strong> vive en zonas húmedas de montaña.
-      </p>
-      <img src="imagenes/rana.jpg" alt="Rana en su hábitat" width="500">
-    </article>
-
-    <article>
-      <h3 class="titulo">Camaleón</h3>
-      <p class="texto">
-        Reptil capaz de <strong>cambiar de color</strong> para adaptarse al entorno.
-      </p>
-      <img src="imagenes/camaleon.jpg" alt="Camaleón en la vegetación" width="360">
-    </article>
-
-    <article>
-      <h3 class="titulo">Iguana</h3>
-      <p class="texto">
-        Animal que se <strong>mimetiza</strong> con la vegetación tropical.
-      </p>
-      <img src="imagenes/iguana.jpg" alt="Iguana sobre una rama" width="360">
-    </article>
-  </section>
-
-  <section id="grupo-b" class="grupo-b">
-    <h2 class="titulo">Grupo B</h2>
-
-    <article>
-      <h3 class="titulo">Guacamayo</h3>
-      <p class="texto">
-        Ave tropical de <strong>colores intensos</strong>.
-      </p>
-      <img src="imagenes/guacamayo.jpg" alt="Guacamayo" width="360">
-    </article>
-
-    <article>
-      <h3 class="titulo">Salamandra</h3>
-      <p class="texto">
-        Anfibio cuya piel indica <strong>toxicidad</strong>.
-      </p>
-      <img src="imagenes/salamandra.jpg" alt="Salamandra" width="500">
-    </article>
-
-    <article>
-      <h3 class="titulo">Flamenco</h3>
-      <p class="texto">
-        Ave acuática de plumaje <strong>rosado</strong>.
-      </p>
-      <img src="imagenes/flamenco.jpg" alt="Flamenco"width="360">
-    </article>
-  </section>
-
-</main>
-
-<footer>
-  <p class="texto">Trabajo de CSS — Modelo de caja</p>
-</footer>
-
-</body>
-
+  </body>
 </html>
+
