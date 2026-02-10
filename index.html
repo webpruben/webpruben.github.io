@@ -2,109 +2,166 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	<style>
-	* {
-    font-family: "Trebuchet MS", sans-serif;
-    } 
-	body { background-color: #F3F4F6; margin: 0; }
-	h1 {color: #3B82F6}
-	h2 {color: #4B5563}
-	p {color: #374151}
-	main {max-width: 900px; margin: 0 auto; padding: 40px}
-	
-	strong {color: #8B5CF6}
-	.titulos {color: #2C3E50; 
-     text-align: center}
-    .textos {color: #333333}
-    .ejercicios .titulos {color: #E74C3C}
-    .recursos .titulos {color: #16A085}
-	
-
-	
-	</style>
     <title>Mi trabajo en TDAI · Rubén Gómez Meana</title>
+    <style>
+body {
+  background-color: #F3F4F6;
+  margin: 0;
+  font-family: "Trebuchet MS", sans-serif;
+}
 
-  	
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+h1 {
+  color: #3B82F6;
+}
+
+h2 {
+  color: #4B5563;
+  margin-top: 0;
+}
+
+.ejercicios h2 {
+  color: #E74C3C;
+}
+
+.recursos h2 {
+  color: #16A085;
+}
+
+p {
+  color: #374151;
+  line-height: 1.6;
+}
+
+strong {
+  color: #8B5CF6;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #374151;
+  background-color: #e5e7eb;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+nav ul li a:hover {
+  background-color: #3B82F6;
+  color: #ffffff;
+}
+
+section {
+  background-color: #ffffff;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+a {
+  color: #2563EB;
+}
+
+a:hover {
+  color: #1E40AF;
+  text-decoration: underline;
+}
+    </style>
   </head>
   <body>
-	  <main>
-    <h1>Mi trabajo en TDAI — Rubén Gómez</h1>
-	<h1>Índice de mis tareas en TDAI</h1>
-	   <ul>
-		   <li><a href="#presentacion">Presentación personal</a></li>
-		   <li><a href="#ej-html">Mis ejercicios HTML</a></li>
-		   <li><a href="#ej-css">Mis ejercicios CSS</a></li>
-		   <li><a href="#recursos">Recursos de calidad (externos)</a></li>
-		   <li><a href="#cc">Créditos y licenicas</a></li>
-		   <li><a href="#contacto">Contacto</a></li>
-	   </ul>
-<section id="presentacion">
-    <h2 id="presentacion">Presentación</h2>
-    <p>Hola, soy <strong>Rubén Gómez Meana</strong> 1º Bach B. Me interesan <em>los ordenadores</em>, <em>el hardware</em> y <em>la programación</em>. 
-    En esta página podrás consultar mis ejercicios de introducción a HTML y algunos recursos que considero útiles.</p>
-</section>
-<section id="ej-html" class="ejercicios">
-    <h2 id="ej-html">Mis ejercicios · Introducción HTML</h2>
-    <p>Accede a cada ejercicio desde esta lista. Los archivos están en la carpeta <code>ejercicios_html/</code>:</p>
-    <ul>
-      <li><a href="ejercicios_html/web_GomezMeana_Ruben_tarea_1.html" target="_blank">Tarea 1 · Estructura mínima + títulos y párrafos</a></li>
-      <li><a href="ejercicios_html/web_GomezMeana_Ruben_tarea_2.html" target="_blank">Tarea 2 · Énfasis y anidado de etiquetas (inline)</a></li>
-      <li><a href="ejercicios_html/web_GomezMeana_Ruben_tarea_3.html" target="_blank">Tarea 3 · Listas en HTML</a></li>
-      <li><a href="ejercicios_html/web_GomezMeana_Ruben_tarea_4.html" target="_blank">Tarea 4 · Enlaces con <code>&lt;a&gt;</code></a></li>
-      <li><a href="ejercicios_html/web_GomezMeana_Ruben_tarea_5.html" target="_blank">Tarea 5 · Imágenes con <code>&lt;img&gt;</code></a></li>
-	</ul>
-</section>
-<section id="ej-css" class="ejercicios">
-	<h2 id="ej-css">Mis ejercicios · Introducción al CSS</h2>
-	<ul>
-	  <li><a href="ejercicios_html/web_gomezmeana_ruben_css_1.html" target="_blank">Tarea con CSS y <code>&lt;style&gt;</code></a></li>
-	  <li><a href="ejercicios_html/web_gomezmeana_ruben_css_2.html" target="_blank">Tarea con IDs</li></a>
-	  <li><a href="ejercicios_html/web_gomezmeana_ruben_css_3.html" target="_blank">Tarea con &lt;section&gt;</li></a>
-	  <li><a href="ejercicios_html/web_gomezmeana_ruben_css_4.html" target="_blank">Tarea con cajas</li></a>
-    </ul>
 
-  
+<nav>
+  <ul>
+    <li><a href="#presentacion">Presentación personal</a></li>
+    <li><a href="#ej-html">Mis ejercicios HTML</a></li>
+    <li><a href="#ej-css">Mis ejercicios CSS</a></li>
+    <li><a href="#recursos">Recursos de calidad</a></li>
+    <li><a href="#cc">Créditos y licencias</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<main>
+<section id="presentacion">
+  <h2>Presentación</h2>
+  <p>Hola, soy <strong>Rubén Gómez Meana</strong> 1º Bach B. Me interesan <em>los ordenadores</em>, <em>el hardware</em> y <em>la programación</em>. 
+  En esta página podrás consultar mis ejercicios de introducción a HTML y algunos recursos que considero útiles.</p>
 </section>
+
+<section id="ej-html" class="ejercicios">
+  <h2>Mis ejercicios · Introducción HTML</h2>
+  <p>Accede a cada ejercicio desde esta lista. Los archivos están en la carpeta <code>ejercicios_html/</code>:</p>
+  <ul>
+    <li><a href="ejercicios_html/web_GomezMeana_Ruben_tarea_1.html" target="_blank">Tarea 1 · Estructura mínima + títulos y párrafos</a></li>
+    <li><a href="ejercicios_html/web_GomezMeana_Ruben_tarea_2.html" target="_blank">Tarea 2 · Énfasis y anidado de etiquetas (inline)</a></li>
+    <li><a href="ejercicios_html/web_GomezMeana_Ruben_tarea_3.html" target="_blank">Tarea 3 · Listas en HTML</a></li>
+    <li><a href="ejercicios_html/web_GomezMeana_Ruben_tarea_4.html" target="_blank">Tarea 4 · Enlaces con &lt;a&gt;</a></li>
+    <li><a href="ejercicios_html/web_GomezMeana_Ruben_tarea_5.html" target="_blank">Tarea 5 · Imágenes con &lt;img&gt;</a></li>
+  </ul>
+</section>
+
+<section id="ej-css" class="ejercicios">
+  <h2>Mis ejercicios · Introducción al CSS</h2>
+  <ul>
+    <li><a href="ejercicios_html/web_gomezmeana_ruben_css_1.html" target="_blank">Tarea con CSS y &lt;style&gt;</a></li>
+    <li><a href="ejercicios_html/web_gomezmeana_ruben_css_2.html" target="_blank">Tarea con IDs</a></li>
+    <li><a href="ejercicios_html/web_gomezmeana_ruben_css_3.html" target="_blank">Tarea con &lt;section&gt;</a></li>
+    <li><a href="ejercicios_html/web_gomezmeana_ruben_css_4.html" target="_blank">Tarea con cajas</a></li>
+  </ul>
+</section>
+
 <section id="recursos">
-    <h2 id="recursos">Recursos de calidad (externos)</h2>
-    <p>Referencias consultadas durante las tareas (se abrirán en pestaña nueva):</p>
-   <ul>
-      <li><a href="https://es.wikipedia.org/wiki/Netiqueta" target="_blank">Wikipedia</a></li>
-      <li><a href="https://www.arimetrics.com/glosario-digital/netiqueta" target="_blank">Arimetrics</a></li>
-      <li><a href="https://dle.rae.es/netiqueta" target="_blank">Diccionario de la lengua española</a></li>
-	  <li><a href="https://www.who.int/data/#data" target="_blank">OMS</a></li>
-      <li><a href="https://www.sanidad.gob.es/" target="_blank">Ministerio de Sanidad</a></li>
-      <li><a href="https://aepap.org/" target="_blank">AEPap</a></li>
-      <li><a href="https://www.un.org/es/coronavirus/digital-safety" target="_blank">ONU</a></li>
-      <li><a href="https://www.aepd.es/guias/guia-privacidad-y-seguridad-en-internet.pdf" target="_blank">AEPD</a></li>
-      <li><a href="https://www.avast.com/es-es/c-internet-safety-tips" target="_blank">Avast</a></li>
-    </ul>
+  <h2>Recursos de calidad (externos)</h2>
+  <ul>
+    <li><a href="https://es.wikipedia.org/wiki/Netiqueta" target="_blank">Wikipedia</a></li>
+    <li><a href="https://www.arimetrics.com/glosario-digital/netiqueta" target="_blank">Arimetrics</a></li>
+    <li><a href="https://dle.rae.es/netiqueta" target="_blank">Diccionario de la lengua española</a></li>
+    <li><a href="https://www.who.int/data/#data" target="_blank">OMS</a></li>
+    <li><a href="https://www.sanidad.gob.es/" target="_blank">Ministerio de Sanidad</a></li>
+    <li><a href="https://aepap.org/" target="_blank">AEPap</a></li>
+    <li><a href="https://www.un.org/es/coronavirus/digital-safety" target="_blank">ONU</a></li>
+    <li><a href="https://www.aepd.es/guias/guia-privacidad-y-seguridad-en-internet.pdf" target="_blank">AEPD</a></li>
+    <li><a href="https://www.avast.com/es-es/c-internet-safety-tips" target="_blank">Avast</a></li>
+  </ul>
 </section>
+
 <section id="cc">
-    <h2 id="cc">Créditos y licencias</h2>
-    <p>Aquí se incluye una lista de todas las imagenes usadas, susu autores, su licencia y su URL a la imagen:</p>
-    <ul>
-	  <li>Autor: Pexels - Códigos de computadora - Licencia CC - <a href="https://www.pexels.com/es-es/foto/codigos-de-computadora-207580/" target="_blank">Enlace a la imagen</a> --></li>
-      <li>Autor: Foto de Antoni Shkraba Studio - Licencia CC - <a href="https://www.pexels.com/es-es/foto/persona-sonriente-sonriendo-camiseta-sin-mangas-5890627/" target="_blank">Enlace a la imagen</a></li>
-	  <li>Autor: Foto de Kampus Production - Licencia CC - <a href="https://www.pexels.com/es-es/foto/joven-nino-mirando-observando-7414092/" target="_blank">Enlace a la imagen</a> --></li>
-	  <li>Autor: Foto de Myburgh Roux - Licencia CC - <a href="https://www.pexels.com/es-es/foto/internet-tecnologia-ordenador-negro-4816921/" target="_blank">Enlace a la imagen</a> --></li>
-	  <li>Autor: Foto de Atlantic Ambience - Licencia CC - <a href="https://www.pexels.com/es-es/foto/pajaro-guacamayo-1004517/" target="_blank">Enlace a la imagen</a> --></li>
-	  <li>Autor: Foto de Lexo Salazar - Licencia CC - <a href="https://www.pexels.com/es-es/foto/foto-de-rana-verde-en-hoja-1370740/" target="_blank">Enlace a la imagen</a> --></li>
-	  <li>Autor: Foto de lalu_ua - Licencia CC - <a href="https://www.pexels.com/es-es/foto/naturaleza-arte-bosque-animal-27180811/" target="_blank">Enlace a la imagen</a> --></li>
-	  <li>Autor: Foto de Adrien Stachowiak - Licencia CC - <a href="https://www.pexels.com/es-es/foto/iguana-verde-descansando-en-un-arbol-a-la-luz-del-sol-28529936/" target="_blank">Enlace a la imagen</a> --></li>
-	  <li>Autor: Foto de Amar  Preciado - Licencia CC - <a href="https://www.pexels.com/es-es/foto/bandada-de-flamencos-americanos-20696682/" target="_blank">Enlace a la imagen</a> --></li>
-	  <li>Autor: Foto de Connor Scott McManus - Licencia CC - <a href="https://www.pexels.com/es-es/foto/naturaleza-animal-musgo-suelo-17231283/" target="_blank">Enlace a la imagen</a> --></li>
-    </ul>
-    </ul>
+  <h2>Créditos y licencias</h2>
+  <ul>
+    <li>Autor: Pexels - Códigos de computadora - Licencia CC - <a href="https://www.pexels.com/es-es/foto/codigos-de-computadora-207580/" target="_blank">Enlace</a></li>
+    <li>Autor: Foto de Antoni Shkraba Studio - Licencia CC - <a href="https://www.pexels.com/es-es/foto/persona-sonriente-sonriendo-camiseta-sin-mangas-5890627/" target="_blank">Enlace</a></li>
+    <li>Autor: Foto de Kampus Production - Licencia CC - <a href="https://www.pexels.com/es-es/foto/joven-nino-mirando-observando-7414092/" target="_blank">Enlace</a></li>
+    <li>Autor: Foto de Myburgh Roux - Licencia CC - <a href="https://www.pexels.com/es-es/foto/internet-tecnologia-ordenador-negro-4816921/" target="_blank">Enlace</a></li>
+  </ul>
 </section>
+
 <section id="contacto">
-	<h2 id="contacto">Contacto</h2>
+  <h2>Contacto</h2>
 </section>
-    <p><small>Última actualización: 16/01/2026</small></p>
-	 </main>
-		  
-  </body>
+
+<p><small>Última actualización: 10/02/2026</small></p>
+
+</main>
+
+</body>
 </html>
 
 
