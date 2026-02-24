@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Calculadora de promedios</title>
+<style>
+    body {
+        color: black;
+        font-family: Trebuchet MS, sans-serif;
+    }
+</style> 
+<meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Calculadora de promedios</h1>
+
+<script>
+    window.onload = function() {
+        let num1;
+        let num2;
+        
+        num1 = prompt("Dame el primer número");
+        num2 = prompt("Dame el segundo número");
+
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+
+        let media = (num1 + num2) / 2;
+
+        if (media > 5) {
+            alert("Has aprobado");
+        }
+        if (media == 5) {
+            alert("Has aprobado");
+        }
+        if (media < 5) {
+            alert("Has suspendido");
+        }
+
+        document.write(" El resultado del promedio es: " + media);
+    }
+</script>
+
+</body>
+</html>
