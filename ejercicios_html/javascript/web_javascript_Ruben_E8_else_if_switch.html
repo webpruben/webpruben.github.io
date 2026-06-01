@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 08 — else if y switch</title>
+</head>
+<body>
+
+    <h1>Ejercicio 08 — Estructuras condicionales else if y switch</h1>
+    <p>En este ejercicio se trabaja con decisiones múltiples, corrección de errores de sintaxis y comparación entre else if y switch.</p>
+
+    <script>
+        var tareaEntregada = window.prompt("¿Has entregado la tarea a tiempo? Responde si, no o retrasado");
+        if (tareaEntregada == "si") {
+            document.write("<p>Perfecto. Tu tarea será evaluada sobre 10 puntos.</p>");
+        } else if (tareaEntregada == "no") {
+            document.write("<p>Atención: Tienes un suspenso temporal hasta que realices la entrega.</p>");
+        } else if (tareaEntregada == "retrasado") {
+            document.write("<p>Tu tarea será aceptada, pero se penalizará la nota máxima sobre 8 puntos.</p>");
+        } else {
+            document.write("<p>Opción no válida. Por favor, introduce si, no o retrasado.</p>");
+        }
+
+        let numero = prompt("Ingresa un número:");
+        if (numero > 0) { alert("El número es positivo"); }
+        else if (numero < 0) { alert("El número es negativo"); }
+        else { alert("El número es cero"); }
+
+        let contrasena = prompt("Ingresa tu contraseña:");
+        if (contrasena === "secreto123") { document.write("Contraseña correcta. Bienvenido!"); }
+        else { document.write("Contraseña incorrecta. Inténtalo de nuevo."); }
+
+        let valor = null;
+        if (valor === null) { alert("El valor es nulo."); }
+        else { alert("El valor no es nulo."); }
+
+        let num = parseInt(prompt("Ingresa un número:"));
+        if (num > 0 && num % 2 === 0) { console.log("El número es positivo y además es un número par."); } 
+        else if (num > 0 && num % 2 !== 0) { console.log("El número es positivo y además es un número impar."); } 
+        else { console.log("El número no es positivo o no es par."); }
+
+        var topping = window.prompt("¿Qué topping quieres para tu helado: oreo, kitkat, brownie, lacasitos u otro?");
+        var precio = 0.00;
+        var helado = 1.90;
+        var precioFinal = 0.00;
+        if (topping == "oreo") {
+            precio = 1;
+        } else if (topping == "kitkat") {
+            precio = 1.50;
+        } else if (topping == "brownie") {
+            precio = 0.75;
+        } else if (topping == "lacasitos") {
+            precio = 0.95;
+        } else {
+            document.write("<p>No tenemos este topping, lo sentimos.</p>");
+            precio = 0;
+        }
+        precioFinal = helado + precio;
+        document.write("<p>Versión else if: El helado cuesta " + precioFinal + " €</p>");
+
+        var toppingSwitch = window.prompt("Para la versión switch, vuelve a introducir el topping: oreo, kitkat, brownie, lacasitos u otro");
+        var precioSwitch = 0.00;
+        var heladoBase = 1.90;
+        var precioFinalSwitch = 0.00;
+        switch (toppingSwitch) {
+            case "oreo":
+                precioSwitch = 1;
+                break;
+            case "kitkat":
+                precioSwitch = 1.50;
+                break;
+            case "brownie":
+                precioSwitch = 0.75;
+                break;
+            case "lacasitos":
+                precioSwitch = 0.95;
+                break;
+            default:
+                document.write("<p>No tenemos este topping, lo sentimos.</p>");
+                precioSwitch = 0;
+        }
+        precioFinalSwitch = heladoBase + precioSwitch;
+        document.write("<p>Versión switch: El helado cuesta " + precioFinalSwitch + " €</p>");
+    </script>
+
+</body>
+</html>
