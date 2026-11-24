@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica 3 - Figuras y rellenos</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+<script>
+function setup() {
+  createCanvas(400, 400);
+
+  // FONDO: gris suave
+  background(200);
+
+  // PAREDES: rectángulo grande color crema
+  stroke(90, 70, 50);
+  strokeWeight(3);
+  fill(245, 225, 180);
+  rect(80, 190, 240, 160);
+
+  // CHIMENEA: se dibuja antes del tejado para que el tejado tape su base
+  stroke(60, 40, 30);
+  fill(150, 70, 60);
+  rect(255, 100, 28, 60);
+
+  // TEJADO: triángulo rojo teja, más ancho que las paredes
+  stroke(90, 30, 25);
+  fill(175, 65, 50);
+  triangle(60, 190, 200, 90, 340, 190);
+
+  // PUERTA: marrón con borde marrón oscuro, en el centro
+  stroke(70, 40, 20);
+  strokeWeight(3);
+  fill(140, 90, 50);
+  rect(175, 270, 50, 80);
+
+  // Detalle de la puerta: manilla y línea decorativa
+  stroke(40, 25, 10);
+  strokeWeight(4);
+  line(214, 310, 214, 320);
+  strokeWeight(2);
+  line(200, 280, 200, 340);
+
+  // VENTANA IZQUIERDA: azul claro con marco marrón grueso
+  stroke(120, 75, 40);
+  strokeWeight(6);
+  fill(170, 215, 255);
+  rect(105, 225, 50, 50);
+  // Divisiones de la ventana izquierda
+  strokeWeight(3);
+  line(130, 225, 130, 275);
+  line(105, 250, 155, 250);
+
+  // VENTANA DERECHA: azul claro semitransparente con marco marrón grueso
+  stroke(120, 75, 40);
+  strokeWeight(6);
+  fill(170, 215, 255, 180);
+  rect(245, 225, 50, 50);
+  // Divisiones de la ventana derecha
+  strokeWeight(3);
+  line(270, 225, 270, 275);
+  line(245, 250, 295, 250);
+}
+</script>
+</body>
+</html>

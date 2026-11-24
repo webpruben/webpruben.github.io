@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica 1 - Líneas y colores</title>
+  <!-- Cargamos la biblioteca p5.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+  <!-- A partir de aquí escribimos nuestro programa -->
+  <script>
+    function setup() {
+      createCanvas(400, 400);
+      background(255);
+
+      // Cuadrado de lado 250 que empieza en (50, 80).
+      // Vértices: (50, 80), (300, 80), (300, 330), (50, 330).
+
+      // Lado superior: naranja opaco, grosor 2.
+      stroke(255, 140, 0);
+      strokeWeight(2);
+      line(50, 80, 300, 80);
+
+      // Lado derecho: morado semitransparente, grosor 8.
+      stroke(128, 0, 200, 110);
+      strokeWeight(8);
+      line(300, 80, 300, 330);
+
+      // Lado inferior: verde opaco, grosor 5.
+      stroke(0, 150, 60);
+      strokeWeight(5);
+      line(300, 330, 50, 330);
+
+      // Lado izquierdo: azul oscuro, grosor 12.
+      stroke(0, 0, 120);
+      strokeWeight(12);
+      line(50, 330, 50, 80);
+    }
+  </script>
+</body>
+</html>

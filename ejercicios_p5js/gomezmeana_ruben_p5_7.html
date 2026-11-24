@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica 7 - Casa adaptable</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+<script>
+function setup() {
+  createCanvas(600, 400);   // También funciona con createCanvas(300, 200);
+
+  // FONDO: gris suave
+  background(200);
+
+  // VARIABLES DERIVADAS (todo se calcula a partir de width y height)
+  let centroX = width / 2;            // centro horizontal del lienzo
+  let baseY = height * 0.88;          // línea donde apoya la casa (88 % del alto)
+  let anchoCasa = width * 0.50;       // la casa ocupa el 50 % del ancho (antes 40 %)
+  let altoCasa = height * 0.45;       // y el 45 % del alto (antes 40 %)
+  let casaX = centroX - anchoCasa / 2; // esquina izquierda: la casa queda centrada
+  let casaY = baseY - altoCasa;       // esquina superior de las paredes
+  let altoTejado = height * 0.28;     // altura del tejado
+  let grosor = height * 0.0075;       // grosor normal de los bordes (3 si el alto es 400)
+
+  // PAREDES: rectángulo crema
+  stroke(90, 70, 50);
+  strokeWeight(grosor);
+  fill(245, 225, 180);
+  rect(casaX, casaY, anchoCasa, altoCasa);
+
+  // CHIMENEA: antes del tejado para que el tejado tape su base
+  stroke(60, 40, 30);
+  fill(150, 70, 60);
+  rect(casaX + anchoCasa * 0.70, casaY - altoTejado * 0.75,
+       anchoCasa * 0.12, altoTejado * 0.60);
+
+  // TEJADO: triángulo que sobresale un 10 % por cada lado
+  stroke(90, 30, 25);
+  fill(175, 65, 50);
+  triangle(casaX - anchoCasa * 0.10, casaY,
+           centroX, casaY - altoTejado,
+           casaX + anchoCasa * 1.10, casaY);
+
+  // PUERTA: centrada, con ancho y alto proporcionales a la casa
+  let puertaW = anchoCasa * 0.22;
+  let puertaH = altoCasa * 0.55;
+  let puertaX = centroX - puertaW / 2;
+  stroke(70, 40, 20);
+  strokeWeight(grosor);
+  fill(140, 90, 50);
+  rect(puertaX, baseY - puertaH, puertaW, puertaH);
+
+  // Detalles de la puerta: manilla y línea decorativa
+  stroke(40, 25, 10);
+  strokeWeight(grosor * 1.3);
+  line(puertaX + puertaW * 0.78, baseY - puertaH * 0.45,
+       puertaX + puertaW * 0.78, baseY - puertaH * 0.30);
+  strokeWeight(grosor * 0.7);
+  line(centroX, baseY - puertaH * 0.92, centroX, baseY - puertaH * 0.05);
+
+  // VENTANAS: cuadradas, con tamaño proporcional al ancho de la casa
+  let ventana = anchoCasa * 0.22;
+  let ventanaY = casaY + altoCasa * 0.22;
+  let ventanaIzqX = casaX + anchoCasa * 0.12;
+  let ventanaDerX = casaX + anchoCasa * 0.88 - ventana;
+
+  // Ventana izquierda: azul claro con marco marrón grueso
+  stroke(120, 75, 40);
+  strokeWeight(grosor * 2);
+  fill(170, 215, 255);
+  rect(ventanaIzqX, ventanaY, ventana, ventana);
+  strokeWeight(grosor);
+  line(ventanaIzqX + ventana / 2, ventanaY, ventanaIzqX + ventana / 2, ventanaY + ventana);
+  line(ventanaIzqX, ventanaY + ventana / 2, ventanaIzqX + ventana, ventanaY + ventana / 2);
+
+  // Ventana derecha: igual pero semitransparente
+  strokeWeight(grosor * 2);
+  fill(170, 215, 255, 180);
+  rect(ventanaDerX, ventanaY, ventana, ventana);
+  strokeWeight(grosor);
+  line(ventanaDerX + ventana / 2, ventanaY, ventanaDerX + ventana / 2, ventanaY + ventana);
+  line(ventanaDerX, ventanaY + ventana / 2, ventanaDerX + ventana, ventanaY + ventana / 2);
+}
+</script>
+</body>
+</html>

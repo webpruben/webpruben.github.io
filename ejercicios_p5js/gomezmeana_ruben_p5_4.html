@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica 4 - Circunferencias y arcos</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+<script>
+function setup() {
+  createCanvas(400, 400);
+
+  // FONDO: blanco
+  background(255);
+
+  // CABEZA: circunferencia grande sin relleno, en el centro
+  noFill();
+  stroke(0);
+  strokeWeight(3);
+  circle(200, 200, 300);
+
+  // OJOS: dos círculos negros pequeños, alineados y separados
+  noStroke();
+  fill(0);
+  circle(155, 165, 30);
+  circle(245, 165, 30);
+
+  // CEJAS (opcional): dos arcos sobre los ojos
+  // Hay que volver a activar el borde con stroke()
+  noFill();
+  stroke(0);
+  strokeWeight(4);
+  arc(155, 135, 50, 30, PI, TWO_PI);
+  arc(245, 135, 50, 30, PI, TWO_PI);
+
+  // MEJILLAS (opcional): dos elipses rosas sin borde
+  noStroke();
+  fill(255, 150, 160, 150);
+  ellipse(110, 225, 45, 25);
+  ellipse(290, 225, 45, 25);
+
+  // BOCA: sonrisa con un arco (mitad inferior de una elipse)
+  noFill();
+  stroke(200, 0, 0);
+  strokeWeight(5);
+  arc(200, 230, 140, 90, 0, PI);
+}
+</script>
+</body>
+</html>

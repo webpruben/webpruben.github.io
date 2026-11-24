@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica 6 - Mi póster</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+<script>
+function setup() {
+  createCanvas(800, 500);  // Tamaño final del lienzo
+  background(240);
+  noStroke();
+
+  // Título (tamaño 28), centrado en x = 320 (número fijo a propósito).
+  textSize(28);
+  textAlign(CENTER, TOP);
+  fill(20);
+  text("Programar es crear", 320, 16);
+
+  // Subtítulo (tamaño 16), en otro color.
+  textSize(16);
+  fill(0, 90, 180);
+  text("Dibujar con código en p5.js", 320, 52);
+
+  // Etiquetas próximas a las cuatro esquinas (tamaño 12).
+  textSize(12);
+  fill(0);
+  textAlign(LEFT, TOP);
+  text("(0, 0)", 6, 6);
+
+  textAlign(RIGHT, TOP);
+  text("(640, 0)", 634, 6);
+
+  textAlign(LEFT, BOTTOM);
+  text("(0, 360)", 6, 354);
+
+  textAlign(RIGHT, BOTTOM);
+  text("(640, 360)", 634, 354);
+
+  // Texto del centro, con números fijos.
+  textAlign(CENTER, CENTER);
+  textSize(12);
+  fill(30);
+  text("Centro (320, 180)", 320, 180);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica 5 - Mi creación estática</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+<script>
+function setup() {
+  createCanvas(800, 600);
+
+  // 1. FONDO Y ELEMENTOS LEJANOS
+
+  // Cielo azul
+  background(135, 206, 235);
+
+  // Sol: círculo amarillo con rayos (líneas)
+  noStroke();
+  fill(255, 220, 0);
+  ellipse(680, 100, 100, 100);
+  stroke(255, 200, 0);
+  strokeWeight(4);
+  line(680, 40, 680, 20);
+  line(680, 160, 680, 180);
+  line(620, 100, 600, 100);
+  line(740, 100, 760, 100);
+  line(639, 59, 625, 45);
+  line(721, 59, 735, 45);
+  line(639, 141, 625, 155);
+  line(721, 141, 735, 155);
+
+  // Nubes: elipses blancas sin borde
+  noStroke();
+  fill(255);
+  ellipse(200, 90, 130, 50);
+  ellipse(240, 75, 90, 50);
+  ellipse(160, 80, 80, 40);
+  ellipse(470, 60, 110, 40);
+  ellipse(500, 50, 70, 35);
+
+  // Montañas grises (triángulos) con borde oscuro
+  stroke(70, 70, 90);
+  strokeWeight(2);
+  fill(130, 130, 150);
+  triangle(-20, 430, 150, 230, 320, 430);
+  fill(105, 105, 130);
+  triangle(120, 430, 260, 280, 400, 430);
+
+  // Nieve en la cima de la montaña grande
+  noStroke();
+  fill(255);
+  triangle(121, 262, 150, 230, 179, 262);
+
+  // Suelo de hierba
+  stroke(60, 110, 50);
+  strokeWeight(2);
+  fill(110, 175, 90);
+  rect(0, 420, 800, 180);
+
+  // 2. FIGURAS PRINCIPALES
+
+  // Arcoíris: arcos concéntricos sin relleno, de distinto color
+  noFill();
+  strokeWeight(14);
+  stroke(230, 40, 40);
+  arc(400, 425, 520, 520, PI, TWO_PI);
+  stroke(255, 140, 0);
+  arc(400, 425, 490, 490, PI, TWO_PI);
+  stroke(255, 220, 0);
+  arc(400, 425, 460, 460, PI, TWO_PI);
+  stroke(60, 180, 75);
+  arc(400, 425, 430, 430, PI, TWO_PI);
+  stroke(50, 120, 230);
+  arc(400, 425, 400, 400, PI, TWO_PI);
+  stroke(130, 60, 190);
+  arc(400, 425, 370, 370, PI, TWO_PI);
+
+  // Carretera gris con borde oscuro
+  stroke(30);
+  strokeWeight(3);
+  fill(70);
+  rect(0, 510, 800, 60);
+
+  // Línea discontinua de la carretera
+  stroke(255, 255, 255);
+  strokeWeight(4);
+  line(20, 540, 90, 540);
+  line(170, 540, 240, 540);
+  line(320, 540, 390, 540);
+  line(470, 540, 540, 540);
+  line(620, 540, 690, 540);
+
+  // Casa: paredes
+  stroke(90, 70, 50);
+  strokeWeight(3);
+  fill(245, 225, 180);
+  rect(665, 375, 110, 75);
+
+  // Casa: tejado
+  stroke(90, 30, 25);
+  fill(175, 65, 50);
+  triangle(650, 375, 720, 320, 790, 375);
+
+  // 3. DETALLES Y ACABADOS
+
+  // Casa: puerta marrón y ventana azul
+  stroke(70, 40, 20);
+  fill(140, 90, 50);
+  rect(710, 405, 25, 45);
+  stroke(120, 75, 40);
+  strokeWeight(4);
+  fill(170, 215, 255);
+  rect(680, 395, 22, 22);
+  line(691, 395, 691, 417);
+  line(680, 406, 702, 406);
+
+  // Árbol: tronco (rectángulo) y copa (elipse)
+  stroke(70, 45, 25);
+  strokeWeight(2);
+  fill(120, 80, 45);
+  rect(565, 425, 18, 60);
+  stroke(30, 100, 40);
+  fill(50, 140, 60);
+  ellipse(574, 405, 80, 90);
+}
+</script>
+</body>
+</html>
